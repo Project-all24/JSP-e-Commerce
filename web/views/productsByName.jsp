@@ -9,10 +9,13 @@
         <div>
             <div class="nombre" name="${product.nombre}"><c:out value="${product.nombre}"/></div>
             <div class="precio" name="${product.nombre}"><c:out value="${product.precio}"/></div>
+            <div><input name="${product.nombre}" type="number" min="1"/></div>
         </div>
         <div>
-            <c:out value="${product.descripcion}"/>
-            <button name="${product.nombre}" id="añadir">Añadir al carrito</button>
+            <div><c:out value="${product.descripcion}"/></div>
+            <div>
+                <button name="${product.nombre}" id="añadir">Añadir al carrito</button>
+            </div>
         </div>
     </div>
 
