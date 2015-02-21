@@ -23,18 +23,25 @@ $(document).ready(function(){
             var precio = parseInt($('.precio[name|="'+producto+'"]').html());
             var total = parseInt($('#total').html());
 
-            $('.productsCar').append('<div class="ProCar" name="'+nombre+'">'
-                +'<div class="nombreProCar">'
-                +nombre
+            $('.productsCar').append('<div class="ProCar row" name="'+nombre+'">'
+                +'<div class="col-md-12">'
+                +'<div class="row">'
+                    +'<div class="nombreProCar col-md-12">'
+                    +nombre
+                    +'</div>'
                 +'</div>'
-                +'<div class="precioProCar" name="'+nombre+'">'
-                +precio
+                +'<div class="row">'
+                    +'<div class="col-md-12">'
+                        +'<div class="precioProCar pull-left" name="'+nombre+'">'
+                        +precio +'<span>x</span>'
+                        +'</div>'
+                        +'<div class="cantProCar pull-left" name="'+nombre+'">'
+                        +cantidad
+                        +'</div>'
+                        +'<button id="borrarProduc" name="'+nombre+'" class="pull-right glyphicon glyphicon-remove"></button>'
+                    +'</div>'
                 +'</div>'
-                +'<span>x</span>'
-                +'<div class="cantProCar" name="'+nombre+'">'
-                +cantidad
                 +'</div>'
-                +'<button id="borrarProduc" name="'+nombre+'" class="glyphicon glyphicon-remove"></button>'
                 +'</div>');
 
             $('#total').html(total + (precio*cantidad));
@@ -50,7 +57,7 @@ $(document).ready(function(){
         var cantidad = parseInt($('.cantProCar[name|="'+producto+'"]').html());
         var total = parseInt($('#total').html()); 
 
-        $( '.ProCar[name|="'+producto+'"]' ).remove();
+        $('.ProCar[name|="'+producto+'"]').remove();
         $('#total').html( total - (precio*cantidad) );
         
     });

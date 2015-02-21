@@ -26,3 +26,17 @@ input[type='number']{
     padding-top: 2%;
     padding-bottom: 3%;
 }
+
+.ProCar{
+    padding-bottom: 5%;
+}
+
+.carrito>div:last-child{
+    padding-top: 6%;
+}
+
+.carrito>div:nth-child(3){
+    padding-top: 10%;
+}
+
+

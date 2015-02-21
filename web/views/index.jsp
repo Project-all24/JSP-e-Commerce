@@ -19,6 +19,7 @@
     <div class="productos col-md-9">
         
         <h2>Productos</h2>
+        
         <div class="busqueda row">
             <div class="col-md-12">
                 <p>Filtrar búsqueda</p>
