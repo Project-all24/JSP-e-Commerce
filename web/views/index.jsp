@@ -30,14 +30,8 @@
         </div>
         
     </div>
-        
-    <div class="carrito">
-        <h2>Carrito</h2>
-        <div class="productsCar">
-            
-        </div>
-        <p>Total:<span id="total">0.0</span></p>
-    </div>    
+       
+    <jsp:directive.include file="carrito.jsp"/>
         
     </div>        
     

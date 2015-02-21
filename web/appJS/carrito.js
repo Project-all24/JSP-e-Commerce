@@ -1,5 +1,7 @@
 $(document).ready(function(){
     
+    // Añadir productos del carrito --------------
+    
     $(document).on('click','#añadir',function(){
         
         var producto = this.name;
@@ -39,6 +41,8 @@ $(document).ready(function(){
         
         }
     });
+    
+    // Borrar productos del carrito ----------
     
     $(document).on('click','#borrarProduc',function(){
         var producto = this.name;
