@@ -1,4 +1,4 @@
-<div class="carrito">
+<div class="carrito col-md-3">
     <h2>Carrito</h2>
     <div class="productsCar">
     

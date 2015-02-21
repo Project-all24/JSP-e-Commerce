@@ -10,29 +10,34 @@
     </head>
     <body>
     
-    <div class="appWraper">
+    <div class="appWraper container-fluid">
         
     <jsp:directive.include file="header.jsp"/>    
         
-    <div class="productos">
+    <div class="row">
+    
+    <div class="productos col-md-9">
         
         <h2>Productos</h2>
-        
-        <div class="busqueda">
-            <p>Filtrar búsqueda</p>
-            <input type="text" id="buscaNombre" name="buscaNombre">
-            <button id="botonBuscar">Buscar</button>
-            <button id="botonMostrarTodo">Mostrar todos los productos</button>
+        <div class="busqueda row">
+            <div class="col-md-12">
+                <p>Filtrar búsqueda</p>
+                <input type="text" id="buscaNombre" name="buscaNombre">
+                <button id="botonBuscar">Buscar</button>
+                <button id="botonMostrarTodo">Mostrar todos los productos</button>
+            </div>
         </div>
         
-        <div class="divProdu">
+        <div class="divProdu row">
             <jsp:directive.include file="allProducts.jsp"/>
         </div>
         
     </div>
        
     <jsp:directive.include file="carrito.jsp"/>
-        
+    
+    </div>
+    
     </div>        
     
     </body>

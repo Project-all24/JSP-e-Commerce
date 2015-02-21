@@ -5,16 +5,20 @@
 <c:when test="${productos.recuperarProductos()}">
     <c:forEach items="${productos.productos}" var="product">
 
-    <div class="producto">    
-        <div>
-            <div class="nombre" name="${product.nombre}"><c:out value="${product.nombre}"/></div>
-            <div class="precio" name="${product.nombre}"><c:out value="${product.precio}"/></div>
-            <div><input name="${product.nombre}" type="number" min="1"/></div>
+    <div class="producto col-md-4">    
+        <div class="row">
+            <div class="nombre col-md-12" name="${product.nombre}"><c:out value="${product.nombre}"/></div>
         </div>
-        <div>
-            <div><c:out value="${product.descripcion}"/></div>
-            <div>
-                <button name="${product.nombre}" id="añadir">Añadir al carrito</button>
+        <div class="row">
+            <div class="precio col-md-6" name="${product.nombre}"><c:out value="${product.precio}"/></div>
+            <div class="col-md-6">
+                <input name="${product.nombre}" type="number" min="1"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12"><c:out value="${product.descripcion}"/></div>
+            <div class="col-md-12">
+                <button name="${product.nombre}" id="añadir" class="pull-right">Añadir al carrito</button>
             </div>
         </div>
     </div>
