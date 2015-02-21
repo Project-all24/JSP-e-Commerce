@@ -17,9 +17,11 @@
     <div class="row">
     
     <div class="productos col-md-9">
-        
-        <h2>Productos</h2>
-        
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Productos</h2>
+            </div>
+        </div>
         <div class="busqueda row">
             <div class="col-md-12">
                 <p>Filtrar búsqueda</p>

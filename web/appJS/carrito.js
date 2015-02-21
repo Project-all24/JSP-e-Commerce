@@ -30,11 +30,12 @@ $(document).ready(function(){
                     +nombre
                     +'</div>'
                 +'</div>'
-                +'<div class="row">'
+                +'<div class="row infoCompraPro">'
                     +'<div class="col-md-12">'
                         +'<div class="precioProCar pull-left" name="'+nombre+'">'
-                        +precio +'<span>x</span>'
+                        +precio
                         +'</div>'
+                        +'<span class="pull-left">x</span>'
                         +'<div class="cantProCar pull-left" name="'+nombre+'">'
                         +cantidad
                         +'</div>'

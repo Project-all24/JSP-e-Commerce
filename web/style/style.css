@@ -3,6 +3,14 @@
     padding-bottom: 1%;
 }
 
+.productos{
+    border-right: 1px #E4E4E4 solid;
+}
+
+.productos>div:first-child{
+    background-color: #ECECEC;
+}
+
 .producto{
     padding-top: 3%;
     padding-bottom: 3%;
@@ -27,6 +35,15 @@ input[type='number']{
     padding-bottom: 3%;
 }
 
+.carrito{
+    position: fixed;
+    right: 0;
+}
+
+.carrito>div:first-child{
+    background-color: #ECECEC;
+}
+
 .ProCar{
     padding-bottom: 5%;
 }
@@ -37,6 +54,10 @@ input[type='number']{
 
 .carrito>div:nth-child(3){
     padding-top: 10%;
+}
+
+.infoCompraPro .pull-left{
+    padding-right: 1%;
 }
 
 
