@@ -3,7 +3,6 @@ $(document).ready(function(){
     $(document).on('click','#añadir',function(){
         
         var producto = this.name;
-        alert();
         var nombre = $('.nombre[name|="'+producto+'"]').html();
         var precio = parseInt($('.precio[name|="'+producto+'"]').html());
         var total = parseInt($('#total').html());
@@ -15,7 +14,7 @@ $(document).ready(function(){
                 +'<div class="nombreProCar">'
                 +precio
                 +'</div>'
-                +'<span id="borrarProduc" name="'+nombre+'" class="glyphicon glyphicon-remove"></span>'
+                +'<button id="borrarProduc" name="'+nombre+'" class="glyphicon glyphicon-remove"></button>'
                 +'</div>');
         
         total = total + precio; 
@@ -26,7 +25,6 @@ $(document).ready(function(){
     
     $(document).on('click','#borrarProduc',function(){
         var nombre = this.name;
-        alert(nombre);
         $( '.ProCar[name|="'+nombre+'"]' ).remove();
         
     });
