@@ -5,14 +5,14 @@
 <c:when test="${productos.recuperarProductos()}">
     <c:forEach items="${productos.productos}" var="product">
 
-    <div>    
+    <div class="producto">    
         <div>
-            <c:out value="${product.nombre}"/>
-            <c:out value="${product.precio}"/>
-            </div>
+            <div class="nombre" name="${product.nombre}"><c:out value="${product.nombre}"/></div>
+            <div class="precio" name="${product.nombre}"><c:out value="${product.precio}"/></div>
+        </div>
         <div>
             <c:out value="${product.descripcion}"/>
-            <button>Añadir al carrito</button>
+            <button name="${product.nombre}" id="añadir">Añadir al carrito</button>
         </div>
     </div>
 
