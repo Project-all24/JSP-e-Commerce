@@ -19,7 +19,7 @@
     
     <div class="productos col-md-9 col-sm-9">
         <div class="row">
-            <div class="col-md-12 col-xs-10">
+            <div class="col-md-12 col-xs-9">
                 <div class="row headerProductos">
                     <div class="col-md-11 col-sm-11 col-xs-12">
                         <h2>Productos</h2>
@@ -31,8 +31,8 @@
                 </div>
             </div>
             
-            <div class="col-xs-2 hidden-sm hidden-md hidden-lg">
-                <span class="iconoCarrito glyphicon glyphicon-shopping-cart"></span>
+            <div class="col-xs-3 hidden-sm hidden-md hidden-lg">
+                <span class="iconoCarrito pull-right glyphicon glyphicon-shopping-cart"></span>
             </div>
     
         </div>

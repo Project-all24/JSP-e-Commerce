@@ -8,7 +8,11 @@
         width: 92%;
         z-index: 3;
     }
+}/*esto puede ir en style.css porque tengo otro div con 'carrito.jsp'*/
+
+
+@media screen and (max-width: 379px) {
+    .glyphicon{
+        margin-right: 2%;
+    }
 }
-
-/*esto puede ir en style.css porque tengo otro div con 'carrito.jsp'*/
-

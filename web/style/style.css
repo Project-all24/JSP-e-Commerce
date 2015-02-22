@@ -35,7 +35,6 @@
 .productos .hidden-lg{
     /*icono de carrito para pantallas pequeñas*/
     z-index: 2;
-    /*position: fixed;*/
     right: 0
 }
 
@@ -66,6 +65,7 @@ input[type='number']{
 .iconoCarrito{
     font-size: 260%;
     margin-top: 2vh;
+    padding-right: 2px;
 }
 
 .appWrapper>.row>.carrito{
