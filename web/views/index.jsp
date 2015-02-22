@@ -16,11 +16,16 @@
         
     <div class="row">
     
-    <div class="productos col-md-9">
+    <div class="productos col-md-9 col-sm-9">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-xs-10">
                 <h2>Productos</h2>
             </div>
+            
+            <div class="col-xs-2 hidden-sm hidden-md hidden-lg">
+                Carro
+            </div>
+    
         </div>
         <div class="busqueda row">
             <div class="col-md-12">

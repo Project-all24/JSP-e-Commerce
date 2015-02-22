@@ -5,7 +5,7 @@
 <c:when test="${productos.recuperarProductos()}">
     <c:forEach items="${productos.productos}" var="product">
 
-    <div class="producto col-md-4">    
+    <div class="producto col-md-4 col-sm-4">    
         <div class="row">
             <div class="nombre col-md-12" name="${product.nombre}"><c:out value="${product.nombre}"/></div>
         </div>
