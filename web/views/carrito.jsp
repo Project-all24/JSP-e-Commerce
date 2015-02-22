@@ -11,7 +11,7 @@
     </div>
     <div class="row">
         <div class="col-md-12 col-sm-12">
-            <span class="pull-right">Total:<span id="total" >0</span></span>
+            <span class="pull-right">Total:<span id="total">0</span></span>
         </div>
     </div>
     <div class="row">

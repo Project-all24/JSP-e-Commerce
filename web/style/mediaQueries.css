@@ -4,8 +4,8 @@
         display: none;
         position: fixed;
         top: 15%;
-        left: 4%;
-        width: 92%;
+        left: 0;
+        width: 100%;
         z-index: 3;
     }
 }/*esto puede ir en style.css porque tengo otro div con 'carrito.jsp'*/

@@ -25,8 +25,8 @@
                         <h2>Productos</h2>
                     </div>
                     <div class="hidden-xs col-md-1 col-sm-1">
-                        <span class="cambiarVistaLista glyphicon glyphicon-align-justify"></span>
-                        <span class="cambiarVistaCuad glyphicon glyphicon-th"></span>
+                        <span class="cambiarVistaLista pull-right glyphicon glyphicon-align-justify"></span>
+                        <span class="cambiarVistaCuad pull-right glyphicon glyphicon-th"></span>
                     </div>
                 </div>
             </div>
