@@ -21,27 +21,21 @@
 }
 
 .productos .hidden-xs{
-    margin-top: 2%;
+    margin-top: 2vh;
 }
 
 .productos{
     border-right: 2px #E4E4E4 solid;
 }
 
-/*
-@media screen and (max-width: 768px) {
-    .productos>.row:first-child>div:first-child{
-        border-right: 10px solid #E4E4E4;
-    }
-}*/
-
 .productos>div:first-child{
     background-color: #ECECEC;
 }
 
 .productos .hidden-lg{
-    z-index: 99;
-    position: fixed;
+    /*icono de carrito para pantallas pequeñas*/
+    z-index: 2;
+    /*position: fixed;*/
     right: 0
 }
 
@@ -74,12 +68,12 @@ input[type='number']{
     margin-top: 2vh;
 }
 
-.carrito{
+.appWrapper>.row>.carrito{
     position: fixed;
     right: 0;
 }
 
-.carrito>div:first-child{
+.appWrapper>.row>.carrito>div:first-child{
     background-color: #ECECEC;
     margin-bottom: 8%;
 }
@@ -88,11 +82,11 @@ input[type='number']{
     padding-bottom: 5%;
 }
 
-.carrito>div:last-child{
+.appWrapper>.row>.carrito>div:last-child{
     padding-top: 6%;
 }
 
-.carrito>div:nth-child(3){
+.appWrapper>.row>.carrito>div:nth-child(3){
     padding-top: 10%;
 }
 
@@ -100,4 +94,16 @@ input[type='number']{
     padding-right: 1%;
 }
 
+.carrito{
+    padding-bottom: 5%;
+}
 
+.container-fluid>.carrito{
+    display: none;
+}
+
+/*----------*/
+
+.fijarApp{
+    position: fixed;
+}

@@ -62,7 +62,47 @@ $(document).ready(function(){
         $('#total').html( total - (precio*cantidad) );
         
     });
+   
+   // Mostrar carrito cuando la pantalla es pequeña ------------
+   
+    var iconoCar = $('.iconoCarrito');
+    var carrito = $('.container-fluid>.carrito');
+    var appWrapper = $('.appWrapper');
+
+    iconoCar.click(function(){
+       carrito.toggle();
+       /* La aplicacion se coulta cuando añado esta línea  */
+       /*appWrapper.toggle('fijarApp');*/
+    });
     
+    
+    // Mover carrrito en pantallas pequeñas
+    
+    var header = $(".header");
+    var header_h = header.height();
+    var headerPro = $('.headerProductos');
+    var headerPro_h = headerPro.height();
+    
+    var carro = $('.productos>.row>.hidden-sm');
+    var carroCajon = $('.container-fluid>.carrito');
+    
+    $(document).on('scroll',function(){
+        if ($('body').scrollTop() > header_h ){
+            carro.css('position','fixed');
+            carro.css('top','0');
+            carroCajon.css('position','fixed');
+            carroCajon.css('top','0');
+        }else{
+            carro.css('position','absolute');
+            carro.css('top','');
+            carroCajon.css('position','absolute');
+            carroCajon.css('top','');
+        }
+    });
+
+
+            
+
 });
 
 
