@@ -19,11 +19,19 @@
     <div class="productos col-md-9 col-sm-9">
         <div class="row">
             <div class="col-md-12 col-xs-10">
-                <h2>Productos</h2>
+                <div class="row">
+                    <div class="col-md-11 col-sm-11 col-xs-12">
+                        <h2>Productos</h2>
+                    </div>
+                    <div class="hidden-xs col-md-1 col-sm-1">
+                        <span class="cambiarVistaLista glyphicon glyphicon-align-justify"></span>
+                        <span class="cambiarVistaCuad glyphicon glyphicon-th-large"></span>
+                    </div>
+                </div>
             </div>
             
             <div class="col-xs-2 hidden-sm hidden-md hidden-lg">
-                Carro
+                <span class="iconoCarrito glyphicon glyphicon-shopping-cart"></span>
             </div>
     
         </div>

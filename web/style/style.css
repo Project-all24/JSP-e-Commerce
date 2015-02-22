@@ -1,14 +1,48 @@
 .header{
     background-color: #E4E4E4;
-    padding-bottom: 1%;
+    padding-bottom: 1vh;
+}
+
+.header>div:last-child{
+    font-size: 260%;
+    margin-top: 2vh;
+}
+
+.busqueda>div:first-child{
+    padding-top: 3%;
+}
+
+.cambiarVistaCuad{
+    display: none;
+}
+
+.cambiarVistaLista,.cambiarVistaCuad{
+    font-size: 200%;
+}
+
+.productos .hidden-xs{
+    margin-top: 2%;
 }
 
 .productos{
-    border-right: 1px #E4E4E4 solid;
+    border-right: 2px #E4E4E4 solid;
 }
+
+/*
+@media screen and (max-width: 768px) {
+    .productos>.row:first-child>div:first-child{
+        border-right: 10px solid #E4E4E4;
+    }
+}*/
 
 .productos>div:first-child{
     background-color: #ECECEC;
+}
+
+.productos .hidden-lg{
+    z-index: 99;
+    position: fixed;
+    right: 0
 }
 
 .producto{
@@ -33,6 +67,11 @@ input[type='number']{
 .producto>div:last-child>div:first-child{
     padding-top: 2%;
     padding-bottom: 3%;
+}
+
+.iconoCarrito{
+    font-size: 260%;
+    margin-top: 2vh;
 }
 
 .carrito{

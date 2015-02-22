@@ -1,4 +1,4 @@
-<div class="carrito col-md-3 col-sm-3">
+<div class="carrito col-md-3 col-sm-3 hidden-xs">
     <div class="row">
         <div class="col-md-12 col-sm-12">
             <h2>Carrito</h2>

@@ -5,7 +5,7 @@
     </div>
     
     <div class="col-md-2 col-sm-2 col-xs-2">
-        Usuario
+        <span class=" glyphicon glyphicon-user"></span>
     </div>
     
 </div>
