@@ -96,12 +96,13 @@ $(document).ready(function(){
             carro.css('position','absolute');
             carro.css('top','');
             carroCajon.css('position','absolute');
-            carroCajon.css('top','');
+            carroCajon.css('top',header_h);
         }
     });
 
-
-            
+    // Distancia dependiendo de la altura de la pantalla
+    
+    carroCajon.css('top',header_h);
 
 });
 

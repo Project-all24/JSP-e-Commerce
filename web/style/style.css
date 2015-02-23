@@ -40,7 +40,7 @@
 
 .producto{
     padding-top: 3%;
-    padding-bottom: 3%;
+    padding-bottom: 1%;
 }
 
 input[type='number']{
@@ -104,6 +104,10 @@ input[type='number']{
 
 .producto{
     height: 30vh
+}
+
+.precio,input{
+    text-align: right;
 }
 
 /*----------*/

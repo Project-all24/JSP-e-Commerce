@@ -10,7 +10,11 @@
             <div class="nombre col-md-6" name="${product.nombre}"><c:out value="${product.nombre}"/></div>
         </div>
         <div class="row">
-            <div class="precio col-md-6 col-xs-6" name="${product.nombre}"><c:out value="${product.precio}"/></div>
+            <div class="col-md-4">Precio:</div>
+            <div class="precio col-md-8 col-xs-6" name="${product.nombre}"><c:out value="${product.precio}"/></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">Unidades:</div>
             <div class="col-md-6 col-xs-6">
                 <input name="${product.nombre}" type="number" min="1"/>
             </div>
