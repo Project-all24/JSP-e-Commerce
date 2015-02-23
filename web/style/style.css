@@ -99,7 +99,12 @@ input[type='number']{
 }
 
 .container-fluid>.carrito{
+    background-color: white;
     display: none;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 3;
 }
 
 .producto{

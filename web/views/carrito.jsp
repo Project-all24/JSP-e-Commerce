@@ -19,4 +19,4 @@
             <button id="botonComprar" class="pull-right">Comprar</button>
         </div>
     </div>
-</div> 
+</div>

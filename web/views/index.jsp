@@ -52,7 +52,7 @@
     </div>
        
     <!-- Carrito para pantallas más grandes -->
-    <jsp:directive.include file="carrito.jsp"/>
+        <jsp:directive.include file="carrito.jsp"/>
     
     </div>
     
