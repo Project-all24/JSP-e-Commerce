@@ -20,7 +20,7 @@ $(document).ready(function(){
             
             var nombre = $('.nombre[name|="'+producto+'"]').html();
             var cantidad = parseInt($('input[name|="'+producto+'"]').val());
-            var precio = parseInt($('.precio[name|="'+producto+'"]').html());
+            var precio = parseInt($('.cuantia[name|="'+producto+'"]').html());
             var total = parseInt($('#total').html());
 
             $('.productsCar').append('<div class="ProCar row" name="'+nombre+'">'
@@ -81,15 +81,16 @@ $(document).ready(function(){
        appWrapper.fadeTo(400,1);
     });
     
-    // Mover carrrito en pantallas pequeñas
+    // Mover carrito en pantallas pequeñas
     
     var header = $(".header");
-    var header_h = header.height();
+    var header_h = header.height(); 
     var headerPro = $('.headerProductos');
     var headerPro_h = headerPro.height();
     
     var carro = $('.productos>.row>.hidden-sm');
     var carroCajon = $('.container-fluid>.carrito');
+    /*var carroGrande = $('.productos+.carrito');*/
     
     $(document).on('scroll',function(){
         if ($('body').scrollTop() > header_h ){
@@ -101,13 +102,11 @@ $(document).ready(function(){
             carro.css('position','absolute');
             carro.css('top','');
             carroCajon.css('position','absolute');
-            carroCajon.css('top',header_h);
+            carroCajon.css('top','70px');
         }
     });
 
-    // Distancia dependiendo de la altura de la pantalla
-    
-    carroCajon.css('top',header_h+3);
+    // Movercarrito pantallas grandes 
 
 });
 

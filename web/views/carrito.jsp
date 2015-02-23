@@ -1,4 +1,4 @@
-<div class="carrito col-md-3 col-sm-3">
+<header class="carrito col-md-3 col-sm-3">
     <div class="row">
         <div class="col-md-12 col-sm-12">
             <div class="row">
@@ -26,4 +26,4 @@
             <button id="botonComprar" class="pull-right">Comprar</button>
         </div>
     </div>
-</div>
+</header>

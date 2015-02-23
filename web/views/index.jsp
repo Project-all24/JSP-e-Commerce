@@ -21,9 +21,9 @@
         <div class="row">
             <div class="col-md-12 col-xs-9">
                 <div class="row headerProductos">
-                    <div class="col-md-11 col-sm-11 col-xs-12">
+                    <header class="col-md-11 col-sm-11 col-xs-12">
                         <h2>Productos</h2>
-                    </div>
+                    </header>
                     <div class="hidden-xs col-md-1 col-sm-1">
                         <span class="cambiarVistaLista pull-right glyphicon glyphicon-align-justify"></span>
                         <span class="cambiarVistaCuad pull-right glyphicon glyphicon-th"></span>
@@ -53,8 +53,9 @@
        
     <!-- Carrito para pantallas más grandes -->
         <jsp:directive.include file="carrito.jsp"/>
-    
     </div>
+    
+        <jsp:directive.include file="footer.jsp"/>
     
     </div>
     

@@ -1,4 +1,4 @@
-<div class="row header">
+<header class="row header">
     
     <div class="col-md-10 col-sm-10 col-xs-9">
         <h1>E-commerce</h1>
@@ -8,4 +8,4 @@
         <span class="pull-right glyphicon glyphicon-user"></span>
     </div>
     
-</div>
+</header>

@@ -1,15 +1,21 @@
 .header{
+    height: 70px;
     background-color: #E4E4E4;
-    padding-bottom: 1vh;
+    padding-bottom: 10px;
+}
+
+.container-fluid>.carrito{
+    top: 70px;
 }
 
 .header>div:last-child{
+    /*icono usuario*/
     font-size: 260%;
-    margin-top: 2vh;
+    margin-top: 18px;
 }
 
 .busqueda>div:first-child{
-    padding-top: 3%;
+    padding-top: 20px;
 }
 
 .cambiarVistaCuad{
@@ -21,7 +27,7 @@
 }
 
 .productos .hidden-xs{
-    margin-top: 2vh;
+    margin-top: 20px;
 }
 
 .productos{
@@ -38,33 +44,13 @@
     right: 0
 }
 
-.producto{
-    padding-top: 3%;
-    padding-bottom: 1%;
-}
-
 input[type='number']{
     width: 100%;
 }
 
-.nombre{
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
-
-.producto>div:nth-child(2){
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
-
-.producto>div:last-child>div:first-child{
-    padding-top: 2%;
-    padding-bottom: 3%;
-}
-
 .iconoCarrito{
     font-size: 260%;
-    margin-top: 2vh;
+    margin-top: 17px;
     padding-right: 2px;
 }
 
@@ -111,13 +97,30 @@ input[type='number']{
     background-color: #ECECEC;
 }
 
-.precio,input{
+.cuantia,input{
     text-align: right;
 }
 
 .cerrarCarroPeq{
     font-size: 170%;
-    margin-top: 2vh;
+    margin-top: 20px;
+}
+
+.headerProductos{
+    height: 62px;
+}
+
+.busqueda{
+    height: 70px;
+}
+
+.nombre{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.divProdu{
+    padding-bottom: 20px;
 }
 
 /*----------*/
@@ -127,18 +130,51 @@ input[type='number']{
 }
 
 /* ------- Interior de los productos -------- */
-.producto>.row:first-child>div,.producto>.row:nth-child(2),.producto>.row:nth-child(3){
-    height: 40px;
+
+.producto{
+    padding-top: 25px;
+    height: 240px;
+}
+
+.bloqAnadir{
+    position: absolute;
+    bottom: 0
+}
+
+.precio,.cuantia,.unidades,.cantidad,.descripcionPro{
+    padding-top: 7px;
+}
+
+.nombre{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 25px;
+    white-space: nowrap; 
 }
 
 .descripcionPro{
-    height: 70px;
-}
-
-.producto div{
     overflow: hidden;
-    text-overflow:ellipsis;
-    vertical-align: middle;
+    text-overflow: ellipsis;
+    height: 50px;
+    white-space: nowrap;
 }
 
+.ampliaDescrip{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 20px;
+    white-space: nowrap;
+}
+
+/* ---------- footer ----------- */
+
+footer{
+    height: 62px;
+    background-color: #ECECEC;
+    font-size: 1.5em;
+}
+
+footer>div{
+    margin-top: 15px;
+}
 
