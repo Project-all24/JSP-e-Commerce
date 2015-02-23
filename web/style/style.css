@@ -107,12 +107,21 @@ input[type='number']{
     z-index: 3;
 }
 
+.container-fluid>.carrito>.row:first-child{
+    background-color: #ECECEC;
+}
+
 .producto{
     height: 30vh
 }
 
 .precio,input{
     text-align: right;
+}
+
+.cerrarCarroPeq{
+    font-size: 170%;
+    margin-top: 2vh;
 }
 
 /*----------*/

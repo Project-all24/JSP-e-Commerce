@@ -70,11 +70,18 @@ $(document).ready(function(){
     var appWrapper = $('.appWrapper');
 
     iconoCar.click(function(){
-       carrito.toggle();
+       carrito.show();
        /* La aplicacion se coulta cuando añado esta línea  */
        /*appWrapper.toggle('fijarApp');*/
+       appWrapper.fadeTo(400,0.3);
     });
     
+    var iconoCerrarCarro = $('.cerrarCarroPeq');
+    
+    iconoCerrarCarro.click(function(){
+       carrito.hide();
+       appWrapper.fadeTo(400,1);
+    });
     
     // Mover carrrito en pantallas pequeñas
     
@@ -102,7 +109,7 @@ $(document).ready(function(){
 
     // Distancia dependiendo de la altura de la pantalla
     
-    carroCajon.css('top',header_h);
+    carroCajon.css('top',header_h+3);
 
 });
 
