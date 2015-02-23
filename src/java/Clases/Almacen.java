@@ -52,7 +52,7 @@ public class Almacen {
       BD conectar = new BD();
       conectar.conectar("root","usuario","jdbc:mysql://localhost/Comercio");
       
-      String sql = "SELECT * FROM Productos WHERE nombre ='"+nombreFiltro+"'";
+      String sql = "SELECT * FROM Productos WHERE nombre LIKE '%"+nombreFiltro+"%'";
       Statement stmt = conectar.getConn().createStatement();
       ResultSet rs = stmt.executeQuery(sql);
       

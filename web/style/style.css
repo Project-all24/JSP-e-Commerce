@@ -111,10 +111,6 @@ input[type='number']{
     background-color: #ECECEC;
 }
 
-.producto{
-    height: 30vh
-}
-
 .precio,input{
     text-align: right;
 }
@@ -129,3 +125,20 @@ input[type='number']{
 .fijarApp{
     position: fixed;
 }
+
+/* ------- Interior de los productos -------- */
+.producto>.row:first-child>div,.producto>.row:nth-child(2),.producto>.row:nth-child(3){
+    height: 40px;
+}
+
+.descripcionPro{
+    height: 70px;
+}
+
+.producto div{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    vertical-align: middle;
+}
+
+

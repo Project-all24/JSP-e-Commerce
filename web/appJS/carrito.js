@@ -71,8 +71,6 @@ $(document).ready(function(){
 
     iconoCar.click(function(){
        carrito.show();
-       /* La aplicacion se coulta cuando añado esta línea  */
-       /*appWrapper.toggle('fijarApp');*/
        appWrapper.fadeTo(400,0.3);
     });
     
