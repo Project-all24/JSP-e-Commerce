@@ -26,8 +26,6 @@ $(document).ready(function(){
             }
             encontrado= false;
             
-            console.log(productosCarrito);
-            
             // Cambiar la cantidad en la vista
             $('.cantProCar[name|="'+producto+'"]').html(cantidad+cantidadPlus);
             $('#total').html( total + (precio*cantidadPlus) );
@@ -40,11 +38,9 @@ $(document).ready(function(){
             var precio = parseInt($('.cuantia[name|="'+producto+'"]').html());
             var total = parseInt($('#total').html());
             
-            //Meter el producto en el array de compra
+            //Introducir el producto en el array de compra
             var producto = { id:id, cantidad:cantidad };
             productosCarrito.push( producto );
-            
-            console.log(producto);
             
             // Visualizar producto comprado
             $('.productsCar').append('<div class="ProCar row" name="'+nombre+'">'
@@ -84,23 +80,16 @@ $(document).ready(function(){
         var cantidad = parseInt($('.cantProCar[name|="'+producto+'"]').html());
         var total = parseInt($('#total').html()); 
         
-        console.log("carrito: "+productosCarrito);
-        console.log("longitud tabla: "+productosCarrito.length);
-        
         for ( i = 0; i < productosCarrito.length && !encontrado; i++) { 
             console.log("id productos: "+productosCarrito[i].id);
             if( productosCarrito[i].id === id ){
                 encontrado = true;
-                console.log(encontrado);
-                console.log("valor de i: "+i);
                 /*borro un elemento a partir del indice del producto a borrar, que seria ese producto*/
                 productosCarrito.splice(i,1) ; 
             }
         }
         encontrado = false;
-        
-        console.log(productosCarrito);
-        
+
         $('.ProCar[name|="'+producto+'"]').remove();
         $('#total').html( total - (precio*cantidad) );
         
@@ -154,8 +143,6 @@ $(document).ready(function(){
     $('#actualizar').on('click',function(){
         
         var jsonArray = {info:productosCarrito};
-        console.log(jsonArray);
-//      var elementos = JSON.stringify(productosCarrito);
         var elementos = JSON.stringify(jsonArray);
         
         $('#inputCarro').val( elementos );
