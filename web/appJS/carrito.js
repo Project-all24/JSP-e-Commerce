@@ -1,5 +1,8 @@
 $(document).ready(function(){
     
+    var productosCarrito = [];
+    var encontrado = false; 
+    
     // Añadir productos del carrito --------------
     
     $(document).on('click','#añadir',function(){
@@ -7,22 +10,41 @@ $(document).ready(function(){
         var producto = this.name;
         if( $('.ProCar[name|="'+producto+'"]').length > 0 ){
             
+            // Obtener datos
+            var id = parseInt($('.id[name|="'+producto+'"]').val());
             var cantidad = parseInt($('.cantProCar[name|="'+producto+'"]').html());
             var precio = parseInt($('.precioProCar[name|="'+producto+'"]').html());
-            var cantidadPlus = parseInt($('input[name|="'+producto+'"]').val());
-            $('.cantProCar[name|="'+producto+'"]').html(cantidad+cantidadPlus);
-        
+            var cantidadPlus = parseInt($('.cantidad[name|="'+producto+'"]').val());
             var total = parseInt($('#total').html()); 
             
-            $('#total').html( total + (precio*cantidadPlus) );
-        
-        }else{
+            //Cambiar la cantidad de este producto en el array de compra
+            for (i = 0; i < productosCarrito.length && !encontrado; i++) { 
+                if( productosCarrito[i].id === id ){
+                    encontrado = true;
+                    productosCarrito[i].cantidad === productosCarrito[i].cantidad+cantidad; 
+                }
+            }
+            console.log(productosCarrito);
             
+            // Cambiar la cantidad en la vista
+            $('.cantProCar[name|="'+producto+'"]').html(cantidad+cantidadPlus);
+            $('#total').html( total + (precio*cantidadPlus) );
+            
+        }else{
+            // Obtener datos
+            var id = parseInt($('.id[name|="'+producto+'"]').val());
             var nombre = $('.nombre[name|="'+producto+'"]').html();
-            var cantidad = parseInt($('input[name|="'+producto+'"]').val());
+            var cantidad = parseInt($('.cantidad[name|="'+producto+'"]').val());
             var precio = parseInt($('.cuantia[name|="'+producto+'"]').html());
             var total = parseInt($('#total').html());
-
+            
+            //Meter el producto en el array de compra
+            var producto = { id:id, cantidad:cantidad };
+            productosCarrito.push( producto );
+            
+            console.log(producto);
+            
+            // Visualizar producto comprado
             $('.productsCar').append('<div class="ProCar row" name="'+nombre+'">'
                 +'<div class="col-md-12">'
                 +'<div class="row">'
@@ -90,7 +112,6 @@ $(document).ready(function(){
     
     var carro = $('.productos>.row>.hidden-sm');
     var carroCajon = $('.container-fluid>.carrito');
-    /*var carroGrande = $('.productos+.carrito');*/
     
     $(document).on('scroll',function(){
         if ($('body').scrollTop() > header_h ){
@@ -106,7 +127,7 @@ $(document).ready(function(){
         }
     });
 
-    // Movercarrito pantallas grandes 
+    
 
 });
 

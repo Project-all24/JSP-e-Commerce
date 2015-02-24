@@ -4,12 +4,10 @@ $(document).ready(function(){
         
         var JSONcompra;
         
-        console.log( $('.ProCar') );
-        
-        $( ".ProCar" ).each(function( index ) {
-            console.log( index + ": " + $( this ) );
+        $( ".nombreProCar" ).each(function( index ) {
+            console.log( index + ": " + $( this ).html() );
         });
-        
+
     });
     
 });

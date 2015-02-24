@@ -18,22 +18,7 @@
     
     <servlet-mapping>
         <servlet-name>controller</servlet-name>
-        <url-pattern>/controller</url-pattern>
-    </servlet-mapping>
-    
-    <servlet-mapping>
-        <servlet-name>controller</servlet-name>
         <url-pattern>/product</url-pattern>
-    </servlet-mapping>
-    
-    <servlet-mapping>
-        <servlet-name>controller</servlet-name>
-        <url-pattern>/sigin</url-pattern>
-    </servlet-mapping>
-    
-    <servlet-mapping>
-        <servlet-name>controller</servlet-name>
-        <url-pattern>/sigup</url-pattern>
     </servlet-mapping>
     
     <session-config>
