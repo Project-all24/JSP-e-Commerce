@@ -10,4 +10,3 @@
 <script src="../appJS/search.js"></script>
 <script src="../appJS/productos.js"></script>
 <script src="../appJS/carrito.js"></script>
-<script src="../appJS/sendShoppingCart.js"></script>
