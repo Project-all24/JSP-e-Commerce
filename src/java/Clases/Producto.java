@@ -1,5 +1,9 @@
 package Clases;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 public class Producto {
     private int id;
     private String nombre;
@@ -58,5 +62,29 @@ public class Producto {
     public String getNombre() {
         return this.nombre;
     }
+    
+    public boolean recuperarDatosPorId(int id) throws SQLException{
+      boolean existe = false;  
+        
+      BD conectar = new BD();
+      conectar.conectar("root","usuario","jdbc:mysql://localhost/Comercio");
+      
+      String sql = "SELECT * FROM Productos WHERE idproducto ="+id;
+      Statement stmt = conectar.getConn().createStatement();
+      ResultSet rs = stmt.executeQuery(sql);
+      
+      if(rs.next()){
+          this.id = rs.getInt("idproducto");
+          this.nombre = rs.getString("nombre");
+          this.descripcion = rs.getString("descripcion");
+          this.precio = rs.getDouble("precio");
+          existe = true;
+      }
+      
+      rs.close();
+      conectar.desconectar();
+      
+      return existe;
+    } 
     
 }

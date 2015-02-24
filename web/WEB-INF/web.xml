@@ -4,26 +4,32 @@
         <servlet-name>BDcrear</servlet-name>
         <servlet-class>Servlets.BDcrear</servlet-class>
     </servlet>
+    
     <servlet>
         <servlet-name>controller</servlet-name>
         <servlet-class>Servlets.controller</servlet-class>
     </servlet>
+    
     <servlet>
         <servlet-name>purchase</servlet-name>
         <servlet-class>Servlets.purchase</servlet-class>
     </servlet>
+    
     <servlet-mapping>
         <servlet-name>BDcrear</servlet-name>
         <url-pattern>/BDcrear</url-pattern>
     </servlet-mapping>
+    
     <servlet-mapping>
         <servlet-name>controller</servlet-name>
-        <url-pattern>/product</url-pattern>
+        <url-pattern>/controller</url-pattern>
     </servlet-mapping>
+    
     <servlet-mapping>
         <servlet-name>purchase</servlet-name>
         <url-pattern>/purchase</url-pattern>
     </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             30
