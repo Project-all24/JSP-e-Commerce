@@ -1,26 +1,21 @@
-<%@page import="java.util.Arrays"%>
-<%@page import="com.google.gson.Gson"%>
-<%@page import="Clases.Carrito"%>
+<%@page import="org.json.JSONArray"%>
+<%@page import="org.json.JSONObject"%>
+<%@page import="java.util.*"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!-- Pagina jSP para purebas  -->
 
-<c:out value="${param.inputCarro}"/>
-
 <%
     
-String json2 = request.getParameter("inputCarro");  
+String json2 = request.getParameter("inputCarro");
 
-String[] tabla = json2.split(",");
+JSONObject obj = new JSONObject(json2);
 
-System.out.println(Arrays.toString(tabla));
+List list = new ArrayList();
+JSONArray array = obj.getJSONArray("info");
+for(int i = 0 ; i < array.length() ; i++){
+    list.add(array.getJSONObject(i).getInt("id"));
+}
+System.out.println(list);
 
-/* Gson gson = new Gson();
-Carrito carro = gson.fromJson(json2,Carrito.class);
-
-assertEquals("46", carro.getProperty("id"));
-assertEquals("Miguel", carro.getProperty("nombre"));
-assertEquals("Autentia", carro.getProperty("empresa"));
-
-System.out.println(carro); */
-    %>
+%>

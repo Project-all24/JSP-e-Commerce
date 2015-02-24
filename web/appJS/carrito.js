@@ -152,7 +152,12 @@ $(document).ready(function(){
     
     
     $('#actualizar').on('click',function(){
-        var elementos = JSON.stringify(productosCarrito);
+        
+        var jsonArray = {info:productosCarrito};
+        console.log(jsonArray);
+//      var elementos = JSON.stringify(productosCarrito);
+        var elementos = JSON.stringify(jsonArray);
+        
         $('#inputCarro').val( elementos );
     });
     
