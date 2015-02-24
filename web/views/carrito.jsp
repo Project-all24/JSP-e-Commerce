@@ -23,7 +23,11 @@
     </div>
     <div class="row">
         <div class="col-md-12 col-sm-12">
-            <button id="botonComprar" class="pull-right">Comprar</button>
+            <button id="actualizar">Actualizar</button>
+            <form action="oneProduct.jsp" method="POST">
+                <input id="inputCarro" name="inputCarro" type="hidden" value="{d:fdf,g:ghj}">
+                <button type="submit" id="botonComprar" class="pull-right">Comprar</button>
+            </form>
         </div>
     </div>
 </header>

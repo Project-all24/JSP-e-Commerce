@@ -149,6 +149,13 @@ $(document).ready(function(){
     });
 
     // Realizar pedido
+    
+    
+    $('#actualizar').on('click',function(){
+        var elementos = JSON.stringify(productosCarrito);
+        $('#inputCarro').val( elementos );
+    });
+    
     /*
     $('#botonComprar').on('click',function(){
         /*
