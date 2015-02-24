@@ -32,16 +32,42 @@
                     </header>
                 </div>
             </div>
+            <div class="col-xs-3 hidden-sm hidden-md hidden-lg">
+                <span class="iconoCarrito pull-right glyphicon glyphicon-shopping-cart"></span>
+            </div>
         </div>
                   
         <div class="row productContent">            
-            <div class="col-md-9 col-sm-9">
-                Precio:<c:out value="${producto.precio}"/>
+            <div class="precioContent col-md-9 col-sm-9">
+                Precio:
             </div>
-            <div class="col-md-9 col-sm-9">
-                Descripción:<c:out value="${producto.descripcion}"/>
+            <div class="col-md-3 col-sm-3">
+                <c:out value="${producto.precio}"/>
             </div>
-        </div>     
+            
+            <div class="descripContent col-md-12 col-sm-12">
+                Descripción:
+            </div>
+            <div class="col-md-12 col-sm-12">
+                <c:out value="${producto.descripcion}"/>
+            </div>
+            
+            <div class="cantContent col-md-9">
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-6">
+                    Unidades:
+                    </div>
+                    <div class="col-md-4">
+                        <input type="number">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-3">
+                <button>Añadir al carrito</button>
+            </div>
+            
+        </div>
         
         </c:when>
             

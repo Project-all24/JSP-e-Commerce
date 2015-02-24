@@ -190,3 +190,19 @@ footer>div{
     margin-top: 15px;
 }
 
+/* --------Página para un producto---------- */
+
+.productContent{
+    min-height: 162px;
+    background-color: white;
+}
+
+.precioContent,.descripContent{
+    font-weight: bold;
+    height: 30px;
+    padding-top: 10px;
+}
+
+.descripContent+div,.precioContent+div,.cantContent,.cantContent+div{
+    padding-top: 10px;
+}
