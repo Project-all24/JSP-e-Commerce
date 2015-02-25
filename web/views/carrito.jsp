@@ -21,11 +21,14 @@
             <span class="pull-right">Total:<span id="total">0</span></span>
         </div>
     </div>
+    
     <div class="row">
         <div class="col-md-12 col-sm-12">
             <button id="actualizar">Actualizar</button>
             <form action="../purchase" method="POST">
-                <input id="inputCarro" name="inputCarro" type="hidden" value="{d:fdf,g:ghj}">
+                <input id="inputCarro" name="inputCarro" type="hidden" value="">
+                <br>Nombre: <input name="nombreCliente" type="text"/>
+                Dirección: <input name="direccionCliente" type="text"/> 
                 <button type="submit" id="botonComprar" class="pull-right">Comprar</button>
             </form>
         </div>

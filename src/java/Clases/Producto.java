@@ -63,6 +63,8 @@ public class Producto {
         return this.nombre;
     }
     
+    /*---- DAO productos -----*/
+    
     public boolean recuperarDatosPorId(int id) throws SQLException{
       boolean existe = false;  
         

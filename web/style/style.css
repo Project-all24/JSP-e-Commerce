@@ -89,7 +89,7 @@ input[type='number']{
 }
 
 .carrito{
-    padding-bottom: 35px;
+    padding-bottom: 20px;
     background-color: white;
     /*height: 100%;*/
 }
@@ -176,6 +176,10 @@ input[type='number']{
     text-overflow: ellipsis;
     height: 20px;
     white-space: nowrap;
+}
+
+#botonComprar{
+    margin-top: 20px;
 }
 
 /* ---------- footer ----------- */
