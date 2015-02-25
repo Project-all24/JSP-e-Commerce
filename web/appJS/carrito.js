@@ -3,6 +3,20 @@ $(document).ready(function(){
     var productosCarrito = [];
     var encontrado = false; 
     
+    if (jQuery.cookie('carrito')) {
+        $(".todoCarro").html(JSON.parse($.cookie("carrito")));
+    }
+    /*
+    for (var i = 0; i < productosCarrito.length; i++) {
+        $('.productsCar').append(
+            '<div class="ProCar row" name="">'
+            +'<div>'+productosCarrito[i].id+'</div>'
+            +'<div>'+productosCarrito[i].cantidad+'</div>'
+            +'</div>');
+/*
+            $('#total').html(total + (precio*cantidad));
+  *//*}*/
+    
     // Añadir productos del carrito --------------
     
     $(document).on('click','#añadir',function(){
@@ -43,7 +57,8 @@ $(document).ready(function(){
             productosCarrito.push( producto );
             
             // Visualizar producto comprado
-            $('.productsCar').append('<div class="ProCar row" name="'+nombre+'">'
+            $('.productsCar').append(
+            '<div class="ProCar row" name="'+nombre+'">'
                 +'<div class="col-md-12">'
                 +'<div class="row">'
                     +'<div class="nombreProCar col-md-12">'
@@ -63,10 +78,11 @@ $(document).ready(function(){
                     +'</div>'
                 +'</div>'
                 +'</div>'
-                +'</div>');
+            +'</div>');
 
             $('#total').html(total + (precio*cantidad));
-        
+            
+            $.cookie("carrito", JSON.stringify($(".todoCarro").html()),{ expires: 7 });
         }
     });
     
@@ -92,6 +108,8 @@ $(document).ready(function(){
 
         $('.ProCar[name|="'+producto+'"]').remove();
         $('#total').html( total - (precio*cantidad) );
+        
+        setCookie("carrito",productosCarrito,7);
         
     });
    
