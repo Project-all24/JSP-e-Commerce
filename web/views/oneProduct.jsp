@@ -23,12 +23,12 @@
         <c:choose>  
         
         <c:when test="${producto.recuperarDatosPorId(param.productId)}">
-            
+           ${producto.id}
         <div class="row">
             <div class="col-md-12 col-xs-9">
                 <div class="row headerProductos">
                     <header class="col-md-11 col-sm-11 col-xs-12">
-                        <h2>${producto.nombre}</h2>
+                        <h2 class="nombre" name="${producto.nombre}">${producto.nombre}</h2>
                     </header>
                 </div>
             </div>
@@ -37,11 +37,12 @@
             </div>
         </div>
                   
-        <div class="row productContent">            
+        <div class="row productContent">
+            <input class="id" name="${producto.nombre}" type="hidden" value="${producto.id}"/>
             <div class="precioContent col-md-9 col-sm-9">
                 Precio:
             </div>
-            <div class="col-md-3 col-sm-3">
+            <div class="col-md-3 col-sm-3 cuantia" name="${producto.nombre}">
                 <c:out value="${producto.precio}"/>
             </div>
             
@@ -58,13 +59,13 @@
                     Unidades:
                     </div>
                     <div class="col-md-4">
-                        <input type="number">
+                        <input class="cantidad" name="${producto.nombre}" type="number">
                     </div>
                 </div>
             </div>
             
             <div class="col-md-3 col-sm-3">
-                <button>Añadir al carrito</button>
+                <button name="${producto.nombre}" id="añadir" class="pull-right">Añadir al carrito</button>
             </div>
             
         </div>

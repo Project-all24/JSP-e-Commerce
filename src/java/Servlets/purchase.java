@@ -31,6 +31,7 @@ protected void processRequest(HttpServletRequest request, HttpServletResponse re
     
     // Obtengo el JSON con los productos a comprar y lo transformo a JSONObject 
     String json = request.getParameter("inputCarro");
+    System.out.println(json);
     JSONObject obj = new JSONObject(json);
 
     //Listas para almacenar los identificadores y las cantidades
