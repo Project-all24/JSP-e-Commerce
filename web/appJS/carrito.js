@@ -150,55 +150,55 @@ $(document).ready(function(){
         }
     });
 
+
     // Realizar pedido
+   
     
-    
-    $('#actualizar').on('click',function(){
-        
-        var producto;
-        
-        $('.idProCar').each(function(it, elementDOM) {
-            producto = { id: parseInt(elementDOM.value) ,cantidad:""};
-            productosCarrito.push(producto);
-        });
-        
-        $('input.cantProCar').each(function(it, elementDOM) {
-            console.log("iterador: "+ it);
-            console.log("carro: "+ productosCarrito[it].cantidad);
-            productosCarrito[it].cantidad = parseInt(elementDOM.value);
-        });
-        
-        // Parto la tabla en dos porque cada producto me sale dos veces 
-        productosCarrito.splice((productosCarrito.length/2)-1,productosCarrito.length/2) ;
-        
-        //Paso la tabla de JSON
-        console.log(productosCarrito);
-        var jsonArray = {info:productosCarrito};
-        var elementos = JSON.stringify(jsonArray);
-        
-        $.removeCookie('carrito');
-        
-        $('#inputCarro').val( elementos );
-    });
-    
-    /*
-    $('#botonComprar').on('click',function(){
-        /*
-        var JSONcompra;
-        console.log(productosCarrito);
-        */
-       /*
+    $('#formComprar').on('submit',function(e){
+        /*e.preventDefault();*/
         $.ajax({
-            url: "oneProduct.jsp",
+            
+           beforeSend: function(){
+                var producto;
+        
+                $('.idProCar').each(function(it, elementDOM) {
+                    producto = { id: parseInt(elementDOM.value) ,cantidad:""};
+                    productosCarrito.push(producto);
+                });
+
+                $('input.cantProCar').each(function(it, elementDOM) {
+                    console.log("iterador: "+ it);
+                    console.log("carro: "+ productosCarrito[it].cantidad);
+                    productosCarrito[it].cantidad = parseInt(elementDOM.value);
+                });
+
+                // Parto la tabla en dos porque cada producto me sale dos veces 
+                productosCarrito.splice((productosCarrito.length/2)-1,productosCarrito.length/2) ;
+
+                //Paso la tabla de JSON
+                var jsonArray = {info:productosCarrito};
+                var elementos = JSON.stringify(jsonArray);
+
+                $.removeCookie('carrito');
+
+                $('#inputCarro').val( elementos );
+                
+           },
+           
+            url: "../purchase",
             type: "POST",
-            data:  { carrito : productosCarrito },
+            data: new FormData(this),
+            contentType: false,
+            cache: false,
+            processData:false,
+
             success: function(){
-                alert("exito");
+                alert("hecho");
             }
+            
         });
-    
     });
-    */
+    
 });
 
 

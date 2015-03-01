@@ -23,7 +23,6 @@
         <c:choose>  
         
         <c:when test="${producto.recuperarDatosPorId(param.productId)}">
-           ${producto.id}
         <div class="row">
             <div class="col-md-12 col-xs-9">
                 <div class="row headerProductos">
