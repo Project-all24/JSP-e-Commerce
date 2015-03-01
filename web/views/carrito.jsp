@@ -27,8 +27,8 @@
         <div class="col-md-12 col-sm-12">
             <form action="../purchase" id="formComprar" method="POST">
                 <input id="inputCarro" name="inputCarro" type="hidden" value="">
-                <br>Nombre: <input id="nombreCliente" name="nombreCliente" type="text"/>
-                Dirección: <input id="direccionCliente" name="direccionCliente" type="text"/> 
+                <br>Nombre: <input name="nombreCliente" type="text"/>
+                Dirección: <input name="direccionCliente" type="text"/> 
                 <button type="submit" id="botonComprar" class="pull-right">Comprar</button>
             </form>
         </div>
