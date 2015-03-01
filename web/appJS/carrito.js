@@ -21,15 +21,6 @@ $(document).ready(function(){
             var cantidadPlus = parseInt($('.cantidad[name|="'+producto+'"]').val());
             var total = parseInt($('#total').html()); 
 
-            //Cambiar la cantidad de este producto en el array de compra
-            /*for ( i = 0; i < productosCarrito.length && !encontrado; i++) { 
-                if( productosCarrito[i].id === id ){
-                    productosCarrito[i].cantidad = productosCarrito[i].cantidad+cantidadPlus; 
-                    encontrado = true;
-                }
-            }
-            encontrado= false;
-            */
             // Cambiar la cantidad en la vista
             $('.cantProCar[name|="'+producto+'"]').html(cantidad+cantidadPlus);
             $('input.cantProCar[name|="'+producto+'"]').val(cantidad+cantidadPlus);
@@ -44,11 +35,6 @@ $(document).ready(function(){
             var cantidad = parseInt($('.cantidad[name|="'+producto+'"]').val());
             var precio = parseInt($('.cuantia[name|="'+producto+'"]').html());
             var total = parseInt($('#total').html());
-            
-            //Introducir el producto en el array de compra
-            /*var producto = { id:id, cantidad:cantidad };
-            productosCarrito.push( producto );
-            */
            
             // Visualizar producto comprado
             $('.productsCar').append(
@@ -90,17 +76,7 @@ $(document).ready(function(){
         var precio = parseInt($('.precioProCar[name|="'+producto+'"]').html());
         var cantidad = parseInt($('.cantProCar[name|="'+producto+'"]').html());
         var total = parseInt($('#total').html()); 
-        /*
-        for ( i = 0; i < productosCarrito.length && !encontrado; i++) { 
-            console.log("id productos: "+productosCarrito[i].id);
-            if( productosCarrito[i].id === id ){
-                encontrado = true;
-                borro un elemento a partir del indice del producto a borrar, que seria ese producto
-                productosCarrito.splice(i,1) ; 
-            }
-        }
-        encontrado = false;
-        */
+
         $('.ProCar[name|="'+producto+'"]').remove();
         $('#total').html( total - (precio*cantidad) );
         
@@ -150,9 +126,7 @@ $(document).ready(function(){
         }
     });
 
-
     // Realizar pedido
-   
     
     $('#formComprar').on('submit',function(e){
         /*e.preventDefault();*/
@@ -167,8 +141,6 @@ $(document).ready(function(){
                 });
 
                 $('input.cantProCar').each(function(it, elementDOM) {
-                    console.log("iterador: "+ it);
-                    console.log("carro: "+ productosCarrito[it].cantidad);
                     productosCarrito[it].cantidad = parseInt(elementDOM.value);
                 });
 
