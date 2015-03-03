@@ -20,7 +20,7 @@
 
             </div>
         </div>
-        <div class="row">
+        <div class="row div-total">
             <div class="col-md-12 col-sm-12">
                 <span class="pull-right">Total:<span id="total">0</span></span>
             </div>
@@ -30,8 +30,12 @@
         <div class="col-md-12 col-sm-12">
             <form action="../purchase" id="formComprar" method="POST">
                 <input id="inputCarro" name="inputCarro" type="hidden" value="">
-                <br>Nombre: <input name="nombreCliente" type="text"/><br>
-                Dirección: <input name="direccionCliente" type="text"/> 
+                <div class="col-md-12 col-xs-6">
+                    Nombre:<input name="nombreCliente" type="text"/>
+                </div>
+                <div class="col-md-12 col-xs-7">
+                    Dirección: <input name="direccionCliente" type="text"/> 
+                </div>
                 <button type="submit" id="botonComprar" class="pull-right">Comprar</button>
             </form>
         </div>

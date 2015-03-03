@@ -73,7 +73,7 @@ input[type='number']{
 }
 
 .ProCar{
-    padding-bottom: 5%;
+    padding-bottom: 2px;
 }
 
 .appWrapper>.row>.carrito>div:last-child{
@@ -146,7 +146,7 @@ input[type='number']{
 }
 
 .nombreProCar{
-    padding-top: 3%;
+    padding-top: 20px;
 }
 
 /*----------*/
