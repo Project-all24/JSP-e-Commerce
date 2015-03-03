@@ -1,3 +1,4 @@
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <header class="carrito col-md-3 col-sm-3">
     <div class="row">
         <div class="col-md-12 col-sm-12">
@@ -6,7 +7,9 @@
                     <h2>Carrito</h2>
                 </div>
                 <div class="hidden-lg hidden-md hidden-sm col-xs-2">
-                    <span class="cerrarCarroPeq glyphicon glyphicon-remove pull-right"></span>
+                    <button class="cerrarCarroPeq pull-right">
+                        <span class="glyphicon glyphicon-remove pull-right"></span>
+                    </button>
                 </div>
             </div>
         </div>

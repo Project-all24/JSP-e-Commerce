@@ -135,6 +135,20 @@ input[type='number']{
     padding-top: 30px
 }
 
+.div-total{
+    padding-top: 2%;
+}
+/*
+.productsCar{
+    padding-bottom: 3%;
+    overflow-y: scroll;
+    max-height: 40vh;
+}*/
+
+.nombreProCar{
+    padding-top: 3%;
+}
+
 /*----------*/
 
 .fijarApp{

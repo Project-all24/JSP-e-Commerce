@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,7 +32,9 @@
             </div>
             
             <div class="col-xs-3 hidden-sm hidden-md hidden-lg">
-                <span class="iconoCarrito pull-right glyphicon glyphicon-shopping-cart"></span>
+                <button class="pull-right iconoCarrito">
+                    <span class="pull-right glyphicon glyphicon-shopping-cart"></span>
+                </button>
             </div>
     
         </div>

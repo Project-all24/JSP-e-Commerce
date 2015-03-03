@@ -1,3 +1,4 @@
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <div class="producto col-lg-3 col-md-4 col-sm-6 col-xs-12">    
     <div class="row">
         <input class="id" name="${product.nombre}" type="hidden" value="${product.id}"/>
