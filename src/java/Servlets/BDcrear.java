@@ -54,7 +54,40 @@ public class BDcrear extends HttpServlet {
             stmt.executeUpdate(sql);
             
             sql = "INSERT INTO Productos(nombre,descripcion,precio, cantidad) " +
-                   "VALUES ('Mueble','Mueble con compartimento secreto para esconder el alcohol de la vista de tus hijos', 50, 3)";
+                   "VALUES ('Mueble','Mueble con compartimento secreto', 50, 3)";
+            
+            stmt.executeUpdate(sql);
+            sql = "INSERT INTO Productos(nombre,descripcion,precio, cantidad) " +
+                   "VALUES ('Memoria RAM','4GG RAM', 40, 3)";
+            
+            stmt.executeUpdate(sql);
+            sql = "INSERT INTO Productos(nombre,descripcion,precio, cantidad) " +
+                   "VALUES ('Intel i5','Procesador intel de tercera generación con 4 núcleos a 3GHz', 120, 3)";
+            
+            stmt.executeUpdate(sql);
+            sql = "INSERT INTO Productos(nombre,descripcion,precio, cantidad) " +
+                   "VALUES ('Fuente de alimentación','Fuente de alimentación modular con formato ATX. Potencia: 600W', 80, 3)";
+            
+            stmt.executeUpdate(sql);
+            
+            sql = "INSERT INTO Productos(nombre,descripcion,precio, cantidad) " +
+                   "VALUES ('Ratón','Ratón gamer', 50, 3)";
+            stmt.executeUpdate(sql);
+            
+            sql = "INSERT INTO Productos(nombre,descripcion,precio, cantidad) " +
+                   "VALUES ('Monitor Samsung','Monitor Samsung de 19 pulgadas', 70, 3)";
+            stmt.executeUpdate(sql);
+            
+            sql = "INSERT INTO Productos(nombre,descripcion,precio, cantidad) " +
+                   "VALUES ('Teclado','Teclado mecánico', 55, 3)";
+            stmt.executeUpdate(sql);
+            
+            sql = "INSERT INTO Productos(nombre,descripcion,precio, cantidad) " +
+                   "VALUES ('Samsung Galaxy S3 mini','Smartphone con 2 núcleos a un 1GHz, 1GB de RAM y pantall 480x800', 55, 3)";
+            stmt.executeUpdate(sql);
+            
+            sql = "INSERT INTO Productos(nombre,descripcion,precio, cantidad) " +
+                   "VALUES ('Semitorre equipada','Semitorre con 8GB de RAM,procesador intel i7 con 4 núcleos y tarjeta gráfico GTX 970', 700, 3)";
             stmt.executeUpdate(sql);
             
             out.println("Insert products...");
