@@ -81,7 +81,7 @@ input[type='number']{
 }
 
 .appWrapper>.row>.carrito>div:nth-child(3){
-    padding-top: 10%;
+    padding-top: 3%;
 }
 
 .infoCompraPro .pull-left{
@@ -138,12 +138,12 @@ input[type='number']{
 .div-total{
     padding-top: 2%;
 }
-/*
+
 .productsCar{
     padding-bottom: 3%;
     overflow-y: scroll;
     max-height: 40vh;
-}*/
+}
 
 .nombreProCar{
     padding-top: 3%;

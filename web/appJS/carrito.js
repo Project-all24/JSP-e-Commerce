@@ -3,9 +3,14 @@ $(document).ready(function(){
     var productosCarrito = [];
     var encontrado = false; 
     
+    /*
     if (jQuery.cookie('carrito')) {
         $(".todoCarro").html(JSON.parse($.cookie("carrito")));
-    }
+    }*/
+    if( localStorage.getItem("carrito") !== null ){
+        var carro2 = localStorage.getItem("carrito");
+        $('.todoCarro').html(carro2); 
+    }   
     
     // Añadir productos del carrito --------------
     
@@ -25,8 +30,10 @@ $(document).ready(function(){
             $('.cantProCar[name|="'+producto+'"]').html(cantidad+cantidadPlus);
             $('input.cantProCar[name|="'+producto+'"]').val(cantidad+cantidadPlus);
             $('#total').html( total + (precio*cantidadPlus) );
-            
+            /*
             $.cookie("carrito", JSON.stringify($(".todoCarro").html()),{ expires: 7 });
+            */var carro = $('.todoCarro').html();
+            localStorage.setItem("carrito",carro);
             
         }else{
             // Obtener datos
@@ -63,7 +70,11 @@ $(document).ready(function(){
             +'</div>');
 
             $('#total').html(total + (precio*cantidad));
-            $.cookie("carrito", JSON.stringify($(".todoCarro").html()),{ expires: 7 });
+            
+            /*$.cookie("carrito", JSON.stringify($(".todoCarro").html()),{ expires: 7 });
+            */var carro = $('.todoCarro').html();
+            localStorage.setItem("carrito",carro);
+            
         }
     });
     
@@ -79,9 +90,11 @@ $(document).ready(function(){
 
         $('.ProCar[name|="'+producto+'"]').remove();
         $('#total').html( total - (precio*cantidad) );
-        
+        /*
         $.cookie("carrito", JSON.stringify($(".todoCarro").html()),{ expires: 7 });
-        
+        */var carro = $('.todoCarro').html();
+        localStorage.setItem("carrito",carro);
+    
     });
    
    // Mostrar carrito cuando la pantalla es pequeña ------------
@@ -148,7 +161,10 @@ $(document).ready(function(){
         var jsonArray = {info:productosCarrito};
         var elementos = JSON.stringify(jsonArray);
 
-        $.removeCookie('carrito');
+        /*$.removeCookie('carrito');
+        */
+        localStorage.removeItem("carrito");
+        
         $('#inputCarro').val( elementos );
         
         $.ajax({
