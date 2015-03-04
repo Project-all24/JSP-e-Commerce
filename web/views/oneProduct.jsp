@@ -1,6 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,14 +41,14 @@
         <div class="row productContent">
             <input class="id" name="${producto.nombre}" type="hidden" value="${producto.id}"/>
             <div class="precioContent col-md-9 col-sm-9">
-                Precio:
+                <fmt:message key="precio" bundle="${lang}"/>:
             </div>
             <div class="col-md-3 col-sm-3 cuantia" name="${producto.nombre}">
-                <c:out value="${producto.precio}"/>
+                <c:out value="${producto.precio}"/> &euro;
             </div>
             
             <div class="descripContent col-md-12 col-sm-12">
-                Descripción:
+                <fmt:message key="descripcion" bundle="${lang}"/>:
             </div>
             <div class="col-md-12 col-sm-12">
                 <c:out value="${producto.descripcion}"/>
@@ -56,7 +57,7 @@
             <div class="cantContent col-md-9">
                 <div class="row">
                     <div class="col-md-2 col-md-offset-6">
-                    Unidades:
+                    <fmt:message key="unidades" bundle="${lang}"/>:
                     </div>
                     <div class="col-md-4">
                         <input class="cantidad" name="${producto.nombre}" type="number">
@@ -65,7 +66,7 @@
             </div>
             
             <div class="col-md-3 col-sm-3">
-                <button name="${producto.nombre}" id="añadir" class="pull-right">Añadir al carrito</button>
+                <button name="${producto.nombre}" id="añadir" class="pull-right"><fmt:message key="anadir" bundle="${lang}"/></button>
             </div>
             
         </div>

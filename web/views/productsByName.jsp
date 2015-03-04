@@ -14,7 +14,7 @@
     </c:when>
 
     <c:otherwise>
-        <div>No hay productos con ese parámetro</div>
+        <div><fmt:message key="noHay" bundle="${lang}"/></div>
     </c:otherwise>
 
 </c:choose>

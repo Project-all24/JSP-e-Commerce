@@ -1,6 +1,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
 <jsp:useBean id="productos" class="Clases.Almacen" scope="session"/>
 <c:choose>
 
@@ -13,7 +14,7 @@
 </c:when>
 
 <c:otherwise>
-    <div>No hay productos</div>
+    <div><fmt:message key="noHay" bundle="${lang}"/></div>
 </c:otherwise>
             
 </c:choose>

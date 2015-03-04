@@ -1,5 +1,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<fmt:setBundle basename="Bundles.lang" var="lang" scope="application"/>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,7 +25,7 @@
             <div class="col-md-12 col-xs-9">
                 <div class="row headerProductos">
                     <header class="col-md-11 col-sm-11 col-xs-12">
-                        <h2>Productos</h2>
+                        <h2><fmt:message key="productos" bundle="${lang}"/></h2>
                     </header>
                     <div class="hidden-xs col-md-1 col-sm-1">
                         <span class="cambiarVistaLista pull-right glyphicon glyphicon-align-justify"></span>
@@ -40,10 +43,10 @@
         </div>
         <div class="busqueda row">
             <div class="col-md-12">
-                <p>Filtrar búsqueda</p>
+                <p><fmt:message key="textoFiltrar" bundle="${lang}"/></p>
                 <input type="text" id="buscaNombre" name="buscaNombre">
-                <button id="botonBuscar">Buscar</button>
-                <button id="botonMostrarTodo">Mostrar todos los productos</button>
+                <button id="botonBuscar"><fmt:message key="buscar" bundle="${lang}"/></button>
+                <button id="botonMostrarTodo"><fmt:message key="todosProductos" bundle="${lang}"/></button>
             </div>
         </div>
         
