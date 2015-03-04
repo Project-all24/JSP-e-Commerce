@@ -4,7 +4,6 @@ public class LineaVenta {
     private int idProducto;
     private int cantidad;
     private double precio;
-    private String descripcion;
     private double subtotal;
     
     public void LineaVenta(){
@@ -29,10 +28,6 @@ public class LineaVenta {
 
     public double getPrecio() {
         return precio;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
     }
 
     public double getSubtotal() {

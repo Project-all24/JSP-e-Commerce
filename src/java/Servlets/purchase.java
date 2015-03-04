@@ -46,22 +46,18 @@ protected void processRequest(HttpServletRequest request, HttpServletResponse re
         cantidades.add(array.getJSONObject(i).getInt("cantidad"));
     }
     
-    System.out.println("ids: "+ids);
-    System.out.println("cantidades: "+cantidades);
-    
     BD conexion = new BD();
     conexion.conectar("root", "usuario", "jdbc:mysql://localhost/Comercio");
     Statement stmt = conexion.getConn().createStatement();
-    
-    System.out.println("Nombre cliente: "+nombreCliente);
-    System.out.println("Direccion cliente: "+direccionCliente);
 
+    // Insertar venta 
     String sql;
     
     sql = "INSERT INTO Ventas(nombreCliente,direccionCliente) " +
           "VALUES ('"+nombreCliente+"','"+direccionCliente+"')";
     stmt.executeUpdate(sql);
     
+    // Obtener id de la última venta 
     sql = "SELECT idVenta FROM Ventas ORDER BY idVenta DESC LIMIT 1";
     try (ResultSet rs = stmt.executeQuery(sql)) {
         if(rs.next()){
@@ -70,6 +66,7 @@ protected void processRequest(HttpServletRequest request, HttpServletResponse re
         rs.close();
     }
     
+    // Relleno la tabla con la linea de venta y 
     Iterator itId = ids.iterator();
     Iterator itCantidades = cantidades.iterator();
     
@@ -96,6 +93,7 @@ protected void processRequest(HttpServletRequest request, HttpServletResponse re
           "SET total="+precioTotal+""+
           "WHERE idVenta="+idVenta;
     stmt.executeUpdate(sql);
+    
     }
     
 }
