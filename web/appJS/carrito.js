@@ -160,7 +160,7 @@ $(document).ready(function(){
         $('#inputCarro').val( elementos );
         
         $.ajax({
-            url: "../purchase",
+            url: "purchase",
             type: "POST",
             data: $(this).serialize(),
 

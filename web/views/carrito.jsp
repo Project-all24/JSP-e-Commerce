@@ -28,7 +28,7 @@
     </div>
     <div class="row">
         <div class="col-md-12 col-sm-12">
-            <form action="../purchase" id="formComprar" method="POST">
+            <form action="purchase" id="formComprar" method="POST">
                 <input id="inputCarro" name="inputCarro" type="hidden" value="">
                 <div class="col-md-12 col-xs-6">
                     <fmt:message key="nombreCliente" bundle="${lang}"/>: <input name="nombreCliente" type="text"/>

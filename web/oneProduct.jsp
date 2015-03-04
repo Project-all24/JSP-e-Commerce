@@ -8,14 +8,14 @@
     <title>E-commerce</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <jsp:directive.include file="head.jsp"/>
+    <jsp:directive.include file="views/head.jsp"/>
 </head>
 <body>
     
     <div class="container-fluid">
     <div class="appWrapper">    
     
-    <jsp:directive.include file="header.jsp"/>    
+    <jsp:directive.include file="views/header.jsp"/>    
     
     <jsp:useBean id="producto" class="Clases.Producto"/>
     
@@ -82,19 +82,15 @@
         </div>
                     
     <!-- Carrito para pantallas más grandes -->
-        <jsp:directive.include file="carrito.jsp"/>
+        <jsp:directive.include file="views/carrito.jsp"/>
     </div>
     
-        <jsp:directive.include file="footer.jsp"/>
+        <jsp:directive.include file="views/footer.jsp"/>
     
     </div>
-    
-    <!-- Carrito para pantallas pequeñas -->
-    <%--<jsp:directive.include file="carrito.jsp"/>
-    --%>
     
     <!-- Modal al realizar la compra-->
-    <jsp:directive.include file="purchaseModal.jsp"/>
+    <jsp:directive.include file="views/purchaseModal.jsp"/>
     
     </div>        
     
