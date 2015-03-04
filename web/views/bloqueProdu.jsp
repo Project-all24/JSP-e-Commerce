@@ -11,7 +11,7 @@
         </div>
         <div class="col-md-12 col-sm-12 col-xs-12 descripcionPro"><fmt:message key="descripcion" bundle="${lang}"/>: <c:out value="${fn:substring(product.descripcion,0,30)}"/></div>
         <div class="col-md-12 col-xs-12 col-sm-12 ampliaDescrip"> <a href="oneProduct.jsp?productId=<c:out value='${product.id}'/>"><fmt:message key="masInfo" bundle="${lang}"/> ${product.nombre}</a></div>
-        <div class="col-md-12 bloqAnadir">
+        <div class="col-md-12 col-xs-12 bloqAnadir">
             <button name="${product.nombre}" id="añadir" class="pull-right"><fmt:message key="anadir" bundle="${lang}"/></button>
         </div>
     </div>

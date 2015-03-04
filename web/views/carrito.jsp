@@ -1,5 +1,5 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<header class="carrito col-md-3 col-sm-3">
+<div class="carrito col-md-3 col-sm-3">
     <div class="row">
         <div class="col-md-12 col-sm-12">
             <div class="row">
@@ -40,4 +40,4 @@
             </form>
         </div>
     </div>
-</header>
+</div>
