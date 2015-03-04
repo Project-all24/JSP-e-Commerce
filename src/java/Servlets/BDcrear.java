@@ -6,6 +6,7 @@ import java.io.PrintWriter;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +18,10 @@ public class BDcrear extends HttpServlet {
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            
+            /*
+            RequestDispatcher rd = request.getRequestDispatcher("/confApp");
+            rd.include(request, response);
+            */
             BD conexion = new BD();
             conexion.conectar("root", "usuario", "jdbc:mysql://localhost/");
             Statement stmt = conexion.getConn().createStatement();
