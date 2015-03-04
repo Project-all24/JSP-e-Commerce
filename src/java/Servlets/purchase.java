@@ -28,6 +28,7 @@ protected void processRequest(HttpServletRequest request, HttpServletResponse re
     int idproducto;
     double precio = 0;
     int cantidad;
+    double precioTotal = 0;
     
     // Obtengo el JSON con los productos a comprar y lo transformo a JSONObject 
     String json = request.getParameter("inputCarro");
@@ -80,6 +81,7 @@ protected void processRequest(HttpServletRequest request, HttpServletResponse re
         try (ResultSet rs = stmt.executeQuery(sql)) {
             if(rs.next()){
                 precio = rs.getDouble("precio");
+                precioTotal = precioTotal + precio*cantidad;
             }
             rs.close();
         }
@@ -89,7 +91,11 @@ protected void processRequest(HttpServletRequest request, HttpServletResponse re
         
         stmt.executeUpdate(sql);
     }
-    
+
+    sql = "UPDATE Ventas "+ 
+          "SET total="+precioTotal+""+
+          "WHERE idVenta="+idVenta;
+    stmt.executeUpdate(sql);
     }
     
 }

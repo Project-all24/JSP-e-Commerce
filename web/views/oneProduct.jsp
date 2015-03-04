@@ -3,7 +3,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
-<html>
+<html lang="<fmt:message key="idioma" bundle="${lang}"/>">
 <head>
     <title>E-commerce</title>
     <meta charset="UTF-8">

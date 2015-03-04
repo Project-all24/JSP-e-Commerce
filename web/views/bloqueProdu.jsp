@@ -4,7 +4,7 @@
         <input class="id" name="${product.nombre}" type="hidden" value="${product.id}"/>
         <div class="col-md-12 nombre" name="${product.nombre}"><c:out value="${product.nombre}"/></div>
         <div class="col-md-5 col-sm-5 col-xs-5 precio"><fmt:message key="precio" bundle="${lang}"/>:</div>
-        <div class="col-md-7 col-sm-7 col-xs-7 cuantia" name="${product.nombre}"><c:out value="${product.precio}"/> &euro;</div>
+        <div class="col-md-7 col-sm-7 col-xs-7 cuantia" name="${product.nombre}"><fmt:formatNumber type="currency" currencySymbol="&euro;" value="${product.precio}" /></div>
         <div class="col-md-6 col-sm-6 col-xs-6 unidades"><fmt:message key="unidades" bundle="${lang}"/>:</div>
         <div class="col-md-6 col-sm-6 col-xs-6 cantidad">
             <input class="cantidad" name="${product.nombre}" type="number" min="1"/>

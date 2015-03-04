@@ -22,7 +22,7 @@
         </div>
         <div class="row div-total">
             <div class="col-md-12 col-sm-12">
-                <span class="pull-right"><fmt:message key="total" bundle="${lang}"/>: <span id="total">0</span>&euro;</span>
+                <span class="pull-right"><fmt:message key="total" bundle="${lang}"/>: <span id="total">0</span> &euro;</span>
             </div>
         </div>
     </div>

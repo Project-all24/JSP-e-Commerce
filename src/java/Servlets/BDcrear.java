@@ -99,7 +99,8 @@ public class BDcrear extends HttpServlet {
                    "( idVenta INT AUTO_INCREMENT PRIMARY KEY," + 
                    " nick VARCHAR(50)," + 
                    " nombreCliente VARCHAR(40),"+
-                   " direccionCliente VARCHAR(40) )";
+                   " direccionCliente VARCHAR(40),"+ 
+                   " total decimal(6,2))";
 
             stmt.executeUpdate(sql);
             out.println("Created table Ventas...");

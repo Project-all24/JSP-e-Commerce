@@ -4,7 +4,7 @@
 <fmt:setBundle basename="Bundles.lang" var="lang" scope="application"/>
 
 <!DOCTYPE html>
-<html>
+<html lang="<fmt:message key="idioma" bundle="${lang}"/>">
     <head>
         <title>E-commerce</title>
         <meta charset="UTF-8">
