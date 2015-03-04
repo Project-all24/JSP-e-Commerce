@@ -180,7 +180,7 @@ $(document).ready(function(){
             data: $(this).serialize(),
 
             success: function(){
-                $('.carritoModal').html( $('.todoCarro').html() );
+                $('.carritoModal').html( 'Total: '+$('#total').html()+' €' );
                 $('.productsCar').empty();
                 $('input[name|=nombreCliente]').val('');
                 $('input[name|=direccionCliente]').val('');
