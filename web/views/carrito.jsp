@@ -36,7 +36,7 @@
                 <div class="col-md-12 col-xs-7">
                     <fmt:message key="direccionCliente" bundle="${lang}"/>: <input name="direccionCliente" type="text"/> 
                 </div>
-                <button type="submit" id="botonComprar" class="pull-right"><fmt:message key="comprar" bundle="${lang}"/></button>
+                <button type="submit" id="botonComprar" class="pull-right" data-toggle="modal" data-target=".bs-example-modal-sm"><fmt:message key="comprar" bundle="${lang}"/></button>
             </form>
         </div>
     </div>

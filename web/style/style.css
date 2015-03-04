@@ -208,7 +208,7 @@ footer>div{
     margin-top: 15px;
 }
 
-/* --------Página para un producto---------- */
+/* -------- Página para un producto ---------- */
 
 .productContent{
     min-height: 162px;
@@ -223,4 +223,13 @@ footer>div{
 
 .descripContent+div,.precioContent+div,.cantContent,.cantContent+div{
     padding-top: 10px;
+}
+
+
+/* --------- Modal ---------- */
+
+.modal-content{
+    background-color: #C2FFC2;
+    padding: 10% 5% 10% 5%;
+    text-align: center;
 }
