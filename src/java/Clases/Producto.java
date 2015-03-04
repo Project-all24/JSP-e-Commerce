@@ -67,9 +67,14 @@ public class Producto {
     
     public boolean recuperarDatosPorId(int id) throws SQLException{
       boolean existe = false;  
-        
+      
+      String user = "root";
+      String pass = "usuario";
+      String dbname = "Comercio";
+      String route = "jdbc:mysql://localhost/";
+      
       BD conectar = new BD();
-      conectar.conectar("root","usuario","jdbc:mysql://localhost/Comercio");
+      conectar.conectar(user,pass,route+dbname);
       
       String sql = "SELECT * FROM Productos WHERE idproducto ="+id;
       Statement stmt = conectar.getConn().createStatement();

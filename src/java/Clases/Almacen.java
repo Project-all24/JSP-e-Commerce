@@ -19,9 +19,14 @@ public class Almacen {
     
     public boolean recuperarProductos() throws SQLException{
       List <Producto> listado = new ArrayList();  
-        
+      
+      String user = "root";
+      String pass = "usuario";
+      String dbname = "Comercio";
+      String route = "jdbc:mysql://localhost/";
+      
       BD conectar = new BD();
-      conectar.conectar("root","usuario","jdbc:mysql://localhost/Comercio");
+      conectar.conectar(user,pass,route+dbname);
       
       String sql = "SELECT * FROM Productos";
       Statement stmt = conectar.getConn().createStatement();
@@ -48,9 +53,14 @@ public class Almacen {
     
     public boolean recuperarProductos(String nombreFiltro) throws SQLException{
       List <Producto> listado = new ArrayList();  
-        
+      
+      String user = "root";
+      String pass = "usuario";
+      String dbname = "Comercio";
+      String route = "jdbc:mysql://localhost/";
+      
       BD conectar = new BD();
-      conectar.conectar("root","usuario","jdbc:mysql://localhost/Comercio");
+      conectar.conectar(user,pass,route+dbname);
       
       String sql = "SELECT * FROM Productos WHERE nombre LIKE '%"+nombreFiltro+"%'";
       Statement stmt = conectar.getConn().createStatement();

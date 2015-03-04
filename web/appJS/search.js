@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $("#botonBuscar").on("click",function(){
         $.ajax({
-            url:"productsByName.jsp",
+            url:"views/productsByName.jsp",
             data:  { nombre : $("#buscaNombre").val() },
             success: function(result){
                 $(".divProdu").html(result);
@@ -11,7 +11,7 @@ $(document).ready(function(){
     
     $("#botonMostrarTodo").on("click",function(){
         $.ajax({
-            url:"allProducts.jsp",
+            url:"views/allProducts.jsp",
             success: function(result){
                 $(".divProdu").html(result);
             }

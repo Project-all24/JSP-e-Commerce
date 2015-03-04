@@ -17,12 +17,14 @@ public class BDcrear extends HttpServlet {
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /*
-            RequestDispatcher rd = request.getRequestDispatcher("/confApp");
-            rd.include(request, response);
-            */
+           
+            String user = "root";
+            String pass = "usuario";
+            String dbname = "Comercio";
+            String route = "jdbc:mysql://localhost/";
+            
             BD conexion = new BD();
-            conexion.conectar("root", "usuario", "jdbc:mysql://localhost/");
+            conexion.conectar(user, pass, route);
             Statement stmt = conexion.getConn().createStatement();
       
             String sql = "CREATE DATABASE Comercio "
@@ -33,7 +35,7 @@ public class BDcrear extends HttpServlet {
 
             conexion.desconectar();
             
-            conexion.conectar("root", "usuario", "jdbc:mysql://localhost/Comercio");
+            conexion.conectar(user, pass, route+dbname);
             stmt = conexion.getConn().createStatement();
             
             out.println("Using database Comercio...");
