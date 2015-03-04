@@ -233,3 +233,9 @@ footer>div{
     padding: 10% 5% 10% 5%;
     text-align: center;
 }
+
+/* ------- Carrito en smartphone -------- */
+
+.carroSmart{
+    z-index: 99;
+}

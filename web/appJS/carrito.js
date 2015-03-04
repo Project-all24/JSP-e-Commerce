@@ -107,19 +107,21 @@ $(document).ready(function(){
    // Mostrar carrito cuando la pantalla es pequeña ------------
    
     var iconoCar = $('.iconoCarrito');
-    var carrito = $('.container-fluid>.carrito');
+    var carrito = $('.carrito');
     var appWrapper = $('.appWrapper');
 
     iconoCar.click(function(){
        carrito.show();
-       appWrapper.fadeTo(400,0.3);
+       carrito.addClass('carroSmart');
+       /*appWrapper.fadeTo(400,0.3);*/
     });
     
     var iconoCerrarCarro = $('.cerrarCarroPeq');
     
     iconoCerrarCarro.click(function(){
        carrito.hide();
-       appWrapper.fadeTo(400,1);
+       carrito.removeClass('carroSmart');
+       /*appWrapper.fadeTo(400,1);*/
     });
     
     // Mover carrito en pantallas pequeñas
@@ -130,7 +132,7 @@ $(document).ready(function(){
     var headerPro_h = headerPro.height();
     
     var carro = $('.productos>.row>.hidden-sm');
-    var carroCajon = $('.container-fluid>.carrito');
+    var carroCajon = $('.carrito');
     
     $(document).on('scroll',function(){
         if ($('body').scrollTop() > header_h ){

@@ -65,7 +65,8 @@
     </div>
     
     <!-- Carrito para pantallas pequeñas -->
-    <jsp:directive.include file="carrito.jsp"/>
+    <%--<jsp:directive.include file="carrito.jsp"/>
+    --%>
     
     <!-- Modal al realizar la compra-->
     <jsp:directive.include file="purchaseModal.jsp"/>
