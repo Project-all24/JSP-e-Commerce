@@ -62,7 +62,9 @@ $(document).ready(function(){
                         +'<div class="cantProCar pull-left" name="'+nombre+'">'
                         +cantidad
                         +'</div>'
-                        +'<button id="borrarProduc" name="'+nombre+'" class="pull-right glyphicon glyphicon-remove"></button>'
+                        +'<button id="borrarProduc" name="'+nombre+'" class="pull-right glyphicon glyphicon-remove">\n\
+                            <span class="oculto">Pulsa para borrar este producto</span>\n\
+                         </button>'
                     +'</div>'
                 +'</div>'
                 +'</div>'

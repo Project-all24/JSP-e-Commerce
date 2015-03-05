@@ -24,8 +24,8 @@
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-9">
                 <div class="row headerProductos">
-                    <header class="col-md-11 col-sm-11 col-xs-12">
-                        <h2><fmt:message key="productos" bundle="${lang}"/></h2>
+                    <header id="tituloProdu" class="col-md-11 col-sm-11 col-xs-12">
+                        <fmt:message key="productos" bundle="${lang}"/>
                     </header>
                     <div class="hidden-xs col-md-1 col-sm-1">
                         <span class="cambiarVistaLista pull-right glyphicon glyphicon-align-justify"></span>
@@ -37,6 +37,7 @@
             <div class="col-xs-3 hidden-sm hidden-md hidden-lg">
                 <button class="pull-right iconoCarrito">
                     <span class="pull-right glyphicon glyphicon-shopping-cart"></span>
+                    <span class="oculto"><fmt:message key="carPequeno" bundle="${lang}"/></span>
                 </button>
             </div>
     
@@ -44,10 +45,22 @@
                     
         <div class="busqueda row">
             <div class="col-md-12">
-                <p><fmt:message key="textoFiltrar" bundle="${lang}"/></p>
-                <input type="text" id="buscaNombre" name="buscaNombre">
-                <button id="botonBuscar"><fmt:message key="buscar" bundle="${lang}"/></button>
-                <button id="botonMostrarTodo"><fmt:message key="todosProductos" bundle="${lang}"/></button>
+                <div class="col-md-8">
+                    <label for="buscaNombre">
+                        <fmt:message key="textoFiltrar" bundle="${lang}"/>
+                    </label>
+                    <input type="text" id="buscaNombre" name="buscaNombre">
+                    <button id="botonBuscar">
+                        <span class="oculto"><fmt:message key="relleno" bundle="${lang}"/></span>
+                        <fmt:message key="buscar" bundle="${lang}"/>
+                    </button>
+                </div>
+                <div class="col-md-4">
+                    <button id="botonMostrarTodo">
+                        <span class="oculto"><fmt:message key="relleno" bundle="${lang}"/></span>
+                        <fmt:message key="todosProductos" bundle="${lang}"/>
+                    </button>
+                </div>
             </div>
         </div>
         

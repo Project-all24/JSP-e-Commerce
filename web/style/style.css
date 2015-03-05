@@ -150,6 +150,15 @@ input[type='number']{
     padding-top: 20px;
 }
 
+#tituloCarro,#tituloProdu{
+    font-size: 2.7em;
+    padding-top: 9px;
+}
+
+#tituloCabecera{
+    font-size: 3em;
+}
+
 /*----------*/
 
 .fijarApp{
@@ -243,4 +252,11 @@ footer>div{
 
 .carroSmart{
     z-index: 99;
+}
+
+
+/* ------ Texto oculto solo disponible para los lectores de pantalla ------- */
+
+.oculto{
+    display: none;
 }
