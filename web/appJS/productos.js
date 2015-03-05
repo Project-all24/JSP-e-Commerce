@@ -7,7 +7,7 @@ $(document).ready(function(){
     
     vistaLista.click(function(){
         producto.addClass("col-md-12 col-sm-12 col-lg-12");
-        producto.removeClass("col-md-4 col-sm-4 col-lg-3");
+        producto.removeClass("col-md-4 col-sm-6 col-sm-4 col-lg-3");
         vistaLista.hide();
         vistaCuad.show();
     });

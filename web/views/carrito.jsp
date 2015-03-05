@@ -27,13 +27,13 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12 col-sm-12">
+        <div class="col-md-12 col-sm-12 col-xs-9">
             <form action="purchase" id="formComprar" method="POST">
                 <input id="inputCarro" name="inputCarro" type="hidden" value="">
-                <div class="col-md-12 col-xs-6">
+                <div class="col-md-6 col-sm-12 col-xs-7">
                     <fmt:message key="nombreCliente" bundle="${lang}"/>: <input name="nombreCliente" type="text"/>
                 </div>
-                <div class="col-md-12 col-xs-7">
+                <div class="col-md-7 col-sm-12 col-xs-7">
                     <fmt:message key="direccionCliente" bundle="${lang}"/>: <input name="direccionCliente" type="text"/> 
                 </div>
                 <button type="submit" id="botonComprar" class="pull-right" data-toggle="modal" data-target=".bs-example-modal-sm"><fmt:message key="comprar" bundle="${lang}"/></button>

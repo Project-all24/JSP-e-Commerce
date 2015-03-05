@@ -40,32 +40,32 @@
                   
         <div class="row productContent">
             <input class="id" name="${producto.nombre}" type="hidden" value="${producto.id}"/>
-            <div class="precioContent col-md-9 col-sm-9">
+            <div class="precioContent col-md-9 col-sm-9 col-xs-6">
                 <fmt:message key="precio" bundle="${lang}"/>:
             </div>
-            <div class="col-md-3 col-sm-3 cuantia" name="${producto.nombre}">
+            <div class="col-md-3 col-sm-3 col-xs-6 cuantia" name="${producto.nombre}">
                 <c:out value="${producto.precio}"/> &euro;
             </div>
             
-            <div class="descripContent col-md-12 col-sm-12">
+            <div class="descripContent col-md-12 col-sm-12 col-xs-12">
                 <fmt:message key="descripcion" bundle="${lang}"/>:
             </div>
-            <div class="col-md-12 col-sm-12">
+            <div class="col-md-12 col-sm-12 col-xs-12">
                 <c:out value="${producto.descripcion}"/>
             </div>
             
-            <div class="cantContent col-md-9">
+            <div class="cantContent col-md-9 col-xs-12">
                 <div class="row">
-                    <div class="col-md-2 col-md-offset-6">
+                    <div class="col-md-2 col-md-offset-6 col-xs-7">
                     <fmt:message key="unidades" bundle="${lang}"/>:
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-xs-5">
                         <input class="cantidad" name="${producto.nombre}" type="number">
                     </div>
                 </div>
             </div>
             
-            <div class="col-md-3 col-sm-3">
+            <div class="col-md-3 col-sm-3 col-xs-12">
                 <button name="${producto.nombre}" id="añadir" class="pull-right"><fmt:message key="anadir" bundle="${lang}"/></button>
             </div>
             

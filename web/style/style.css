@@ -89,6 +89,7 @@ input[type='number']{
 }
 
 .carrito{
+    z-index: 99;
     padding-bottom: 20px;
     background-color: white;
     /*height: 100%;*/
@@ -167,8 +168,12 @@ input[type='number']{
     bottom: 0
 }
 
-.precio,.cuantia,.unidades,.cantidad,.descripcionPro{
-    padding-top: 7px;
+.precio,.cuantia,.unidades,.descripcionPro{
+    padding-top: 12px;
+}
+
+.cantidad{
+    margin-top: 5px;
 }
 
 .nombre{

@@ -22,7 +22,7 @@
     
     <div class="productos col-md-9 col-sm-9">
         <div class="row">
-            <div class="col-md-12 col-xs-9">
+            <div class="col-md-12 col-sm-12 col-xs-9">
                 <div class="row headerProductos">
                     <header class="col-md-11 col-sm-11 col-xs-12">
                         <h2><fmt:message key="productos" bundle="${lang}"/></h2>
@@ -63,10 +63,6 @@
         <jsp:directive.include file="views/footer.jsp"/>
     
     </div>
-    
-    <!-- Carrito para pantallas pequeñas -->
-    <%--<jsp:directive.include file="carrito.jsp"/>
-    --%>
     
     <!-- Modal al realizar la compra-->
     <jsp:directive.include file="views/purchaseModal.jsp"/>
