@@ -29,7 +29,7 @@
             <div class="col-md-12 col-xs-9">
                 <div class="row headerProductos">
                     <header class="col-md-11 col-sm-11 col-xs-12">
-                        <h2 class="nombre" name="${producto.nombre}">${producto.nombre}</h2>
+                        <h2 class="nombre" data-name="${producto.nombre}">${producto.nombre}</h2>
                     </header>
                 </div>
             </div>
@@ -43,7 +43,7 @@
             <div class="precioContent col-md-9 col-sm-9 col-xs-6">
                 <fmt:message key="precio" bundle="${lang}"/>:
             </div>
-            <div class="col-md-3 col-sm-3 col-xs-6 cuantia" name="${producto.nombre}">
+            <div class="col-md-3 col-sm-3 col-xs-6 cuantia" data-name="${producto.nombre}">
                 <c:out value="${producto.precio}"/> &euro;
             </div>
             
@@ -66,7 +66,7 @@
             </div>
             
             <div class="col-md-3 col-sm-3 col-xs-12">
-                <button name="${producto.nombre}" id="añadir" class="pull-right"><fmt:message key="anadir" bundle="${lang}"/></button>
+                <button name="${producto.nombre}" class="añadir pull-right"><fmt:message key="anadir" bundle="${lang}"/></button>
             </div>
             
         </div>

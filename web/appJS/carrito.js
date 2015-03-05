@@ -10,16 +10,16 @@ $(document).ready(function(){
     
     // Añadir productos del carrito --------------
     
-    $(document).on('click','#añadir',function(){
+    $(document).on('click','.añadir',function(){
         
         var producto = this.name;
         if( $('.ProCar[name|="'+producto+'"]').length > 0 ){
             
             // Obtener datos
-            var stringPrecio = $('.cuantia[name|="'+producto+'"]').html();
+            var stringPrecio = $('.cuantia[data-name|="'+producto+'"]').html();
             
             var id = parseInt($('.id[name|="'+producto+'"]').val());
-            var cantidad = parseInt($('div.cantProCar[name|="'+producto+'"]').html());
+            var cantidad = parseInt($('div.cantProCar[data-name|="'+producto+'"]').html());
             var precio = parseInt( stringPrecio.slice(1,stringPrecio.length-1) );
             var cantidadPlus = parseInt($('.cantidad[name|="'+producto+'"]').val());
             var total = parseInt($('#total').html()); 
@@ -34,10 +34,10 @@ $(document).ready(function(){
             
         }else{
             // Obtener datos
-            var stringPrecio = $('.cuantia[name|="'+producto+'"]').html();
+            var stringPrecio = $('.cuantia[data-name|="'+producto+'"]').html();
             
             var id = parseInt($('.id[name|="'+producto+'"]').val());
-            var nombre = $('.nombre[name|="'+producto+'"]').html();
+            var nombre = $('.nombre[data-name|="'+producto+'"]').html();
             var cantidad = parseInt($('.cantidad[name|="'+producto+'"]').val());
             var precio = parseInt(stringPrecio.slice(1,stringPrecio.length-1));
             var total = parseInt($('#total').html());

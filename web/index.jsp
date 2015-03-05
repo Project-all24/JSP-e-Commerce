@@ -41,6 +41,7 @@
             </div>
     
         </div>
+                    
         <div class="busqueda row">
             <div class="col-md-12">
                 <p><fmt:message key="textoFiltrar" bundle="${lang}"/></p>
