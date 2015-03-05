@@ -28,8 +28,8 @@
         <div class="row">
             <div class="col-md-12 col-xs-9">
                 <div class="row headerProductos">
-                    <header class="col-md-11 col-sm-11 col-xs-12">
-                        <h2 class="nombre" data-name="${producto.nombre}">${producto.nombre}</h2>
+                    <header id="tituloProdu" class="col-md-11 col-sm-11 col-xs-12">
+                        ${producto.nombre}
                     </header>
                 </div>
             </div>
@@ -57,10 +57,10 @@
             <div class="cantContent col-md-9 col-xs-12">
                 <div class="row">
                     <div class="col-md-2 col-md-offset-6 col-xs-7">
-                    <label for="${product.id}"><fmt:message key="unidades" bundle="${lang}"/></label>:
+                        <label for="cantidadOneProduct"><fmt:message key="unidades" bundle="${lang}"/></label>:
                     </div>
                     <div class="col-md-4 col-xs-5">
-                        <input class="cantidad" name="${producto.nombre}" type="number">
+                        <input id="cantidadOneProduct" class="cantidad" name="${producto.nombre}" type="number">
                     </div>
                 </div>
             </div>
