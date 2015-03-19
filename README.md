@@ -1,6 +1,6 @@
 # JSP-e-Commerce
 
-This is a JSP e-commerce with learning purpose with JSP and servlets y server-side and JQuery in client-side
+This is a JSP e-commerce with learning purpose with JSP and servlets in server-side and JQuery in client-side
 
 Status: developing
 
