@@ -1,8 +1,9 @@
 # JSP-e-Commerce
 
+<b>Second school year project</b>
+
 This is a JSP e-commerce with learning purpose with JSP and servlets in server-side and JQuery in client-side
 
-Status: developing
 
 Try a demo here: http://ecom-nacholozano.rhcloud.com/
 
