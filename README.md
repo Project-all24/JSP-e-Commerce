@@ -2,7 +2,7 @@
 
 <b>Second school year project</b>
 
-This is a JSP e-commerce with learning purpose with JSP and servlets in server-side and JQuery and Bootstrap3 in client-side
+This is a JSP e-commerce with learning purpose with MySQL,JSP and servlets in server-side and JQuery and Bootstrap3 in client-side
 
 
 Try a demo here: http://ecom-nacholozano.rhcloud.com/
